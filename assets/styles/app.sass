@@ -1,0 +1,40 @@
+$color-primary: #ffffff
+$color-secondary: #fb00ab
+$font-color: #000000
+$font-family: Arial, Helvetica, sans-serif
+
+body
+    background-color: $color-primary
+    color: $font-color
+    font-family: $font-family
+    height: 1000px
+    nav
+        position: sticky
+        top: 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        div#nav_options
+            position: absolute
+            left: -40px
+            ul
+                list-style-type: none
+                padding: 0
+                
+        div#nav_burger
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            cursor: pointer
+            height: 19px
+            div
+                width: 23px
+                height: 3px
+                border-radius: 2px
+                background-color: $font-color
+    span.evidence
+        background-color: $color-secondary
+        padding: 8px
+        border-radius: 5px
+        color: $color-primary
