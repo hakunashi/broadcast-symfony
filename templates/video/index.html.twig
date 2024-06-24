@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VideoController!{% endblock %}
+
+{% block body %}
+
+<div id='video-grid'>
+{% for video in videos %}
+
+<a href="{{ path('video_item', { id: video.id }) }}" >
+<img src="{{'/uploads/video/thumbnail/' ~ video.thumb }}" alt="">
+<p>{{ video.title }}</p>
+<p>par {{video.user.username}}</p>
+<p>{{video.views}} vues</p>
+</a>
+
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

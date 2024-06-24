@@ -1,17 +1,21 @@
 <nav>
-    <div id="nav_options">
+    {# <div id='nav_burger'>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div> #}
+
+    <h1><a href="{{ path('video_index') }}">Video nashi</a></h1>
+
+    {% if app.user %}
         <ul>
-            <li>toto</li>
-            <li>tata</li>
+            <li><a href="{{ path('app_logout') }}">deconnexion</a></li>
+            <li><a href="{{ path('video_item_create') }}">Ajouter une nouvelle video</a></li>
         </ul>
-    </div>
-    <div id='nav_burger'>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <h1>Video <span class='evidence' >hub</span></h1>
-    <p>
-        Recherche
-    </p>
+    {% else %}
+        <ul>
+            <li><a href="{{ path('app_login') }}">Connexion</a></li>
+            <li><a href="{{ path('app_register') }}">Créer un compte</a></li>
+        </ul>
+    {% endif %}
 </nav>

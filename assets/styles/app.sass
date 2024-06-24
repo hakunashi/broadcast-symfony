@@ -1,6 +1,6 @@
-$color-primary: #ffffff
-$color-secondary: #fb00ab
-$font-color: #000000
+$color-primary: #000000
+$color-secondary: #fb9200
+$font-color: #ffffff
 $font-family: Arial, Helvetica, sans-serif
 
 body
@@ -8,7 +8,14 @@ body
     color: $font-color
     font-family: $font-family
     height: 1000px
+    a
+        color: inherit
+        text-decoration: none
     nav
+        background-color: $color-primary
+        ul
+            list-style-type: none
+            padding: 0
         position: sticky
         top: 0
         display: flex
@@ -17,9 +24,6 @@ body
         div#nav_options
             position: absolute
             left: -40px
-            ul
-                list-style-type: none
-                padding: 0
                 
         div#nav_burger
             display: flex
@@ -38,3 +42,10 @@ body
         padding: 8px
         border-radius: 5px
         color: $color-primary
+    div#video-grid
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+        a
+            img
+                width: 100%

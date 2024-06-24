@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}video {{video.title}} {% endblock %}
+
+{% block body %}
+
+<video controls>
+
+    <source src="{{'/uploads/video/video/' ~ video.path }}"type="video/mp4" />
+
+</video>
+
+<p>{{ video.title }}</p>
+<p>{{ video.views }} vues</p>
+
+{% endblock %}
